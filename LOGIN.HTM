@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login V18</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--===============================================================================================-->	
+        <link rel="icon" type="image/png" href="images/favicon.ico"/>
+
+        <!--===============================================================================================-->
+
+        <!-- CSS -->
+        <link type="text/css" href="css/main.css" rel="stylesheet">
+	<script src="js/sweet.js"></script>
+        <script src="js/ajax.js"></script>
+    </head>
+    <body style="background-color: #666666;">
+
+        <div class="limiter">
+            <div class="container-login100">
+                <div class="wrap-login100">
+                    <form name="login" class="login100-form validate-form">
+                        <span class="login100-form-title p-b-90">
+                            <img src="images/logo-uk.png">
+                        </span>
+
+                        <label class="label">Id</label>
+                        <div class="wrap-input100">
+                            <input class="input100" type="text" name="log" id="log" disabled>
+                            <span class="focus-input100"></span>
+
+                        </div>
+
+                        <label class="label">Password</label>
+                        <div class="wrap-input100 validate-input" data-validate="Password is required">
+                            <input class="input100" type="password" name="pass" id="pass">
+                            <span class="focus-input100"></span>
+
+                        </div>
+
+
+
+
+                        <div class="container-login100-form-btn">
+                            <button type="button" class="login100-form-btn" onclick="doLogin();">
+                                Sign in
+                            </button>
+                        </div>
+
+
+
+                    </form>
+
+
+
+                    <div class="login100-more" style="background-image: url('images/bg-01.jpg');">
+                        <div class=container5>
+                            <p>Налаштування<br>
+                                <b>TERMOSYSTEMS</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!--<script src="vendor/jquery/jquery-3.2.1.min.js"></script>-->
+
+        <!--<script src="vendor/animsition/js/animsition.min.js"></script>-->
+
+        <!--<script src="vendor/bootstrap/js/popper.js"></script>-->
+
+        <!--<script src="vendor/bootstrap/js/bootstrap.min.js"></script>-->
+
+        <!--<script src="vendor/select2/select2.min.js"></script>-->
+
+        <!--<script src="vendor/daterangepicker/moment.min.js"></script>-->
+
+        <!--===============================================================================================-->
+<script>getSysId()</script>
+
+    </body>
+</html>
