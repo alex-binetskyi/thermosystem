@@ -8,6 +8,8 @@
 .header__inner {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .container {
@@ -21,6 +23,24 @@
 .header__info {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 599px) {
+  .header__info {
+    width: 100%;
+  }
+}
+
+.header__system {
+  margin: 0;
+  padding: 15px;
+  font-weight: bold;
+}
+
+.header__system-name {
+  color: #000000;
 }
 
 .logout-button {
@@ -31,6 +51,7 @@
   background: #B71C1C;
   color: #FFFFFF;
   font-weight: 600;
+  text-transform: uppercase;
   box-shadow: 1px 1px 4px #DADADA;
   transition: background-color 0.3s ease-in-out;
 }
