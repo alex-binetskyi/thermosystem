@@ -11,6 +11,8 @@
 
         <!-- CSS -->
         <link type="text/css" href="css/style.css" rel="stylesheet">
+        <link type="text/css" href="css/redesign.css" rel="stylesheet">
+
         <script src='js/ajax.js'></script>
         <script src='js/settings.js'></script>
         <script src='js/select.js'></script>
@@ -18,13 +20,25 @@
         <!--<script src="js/plotly.min.js"></script>-->	
         <!-- Fonts  -->
 
-    </head><header>
-        <div class="logo">
-            <a href="#"><img src="images/logotip.svg" width="200px" alt=""></a>
+    </head>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="logo">
+                    <a href="#"><img src="images/logotip.svg" width="200" alt=""></a>
+                </div>
+                <div class="header__info">
+                    <div class="time" id="current_timestamp">
+                    </div>
+                    <div class="form-style-2">
+                        <form  method = "post"  action="logout.cgi">
+                            <button class="logout-button" type="submit">LOGOUT</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="time" id="current_timestamp">
-        </div>
-    </header>
+        </header>
     <body>
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
         <div class="container">	
@@ -130,14 +144,6 @@
                             </div>
                         </section>
                     </div>
-
-                    <div class="row">
-                        <div class="form-style-2">
-                            <form  method = "post"  action="logout.cgi">
-                                <input  type="submit"  value="LOGOUT"> Вийти з системи
-                            </form>
-                        </div>
-                    </div> 
                 </div>
 
                 <div class="tab__content">
