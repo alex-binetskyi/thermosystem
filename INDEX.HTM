@@ -58,94 +58,116 @@
                 <input type="radio" id="tab4" name="tabGroup1" class="tab">
                 <label for="tab4">Security</label>
 
-                <div class="tab__content">
-                    <div class="column">
-                        <div class="form-style-2">
-
-                            <form name="theform"  method = "post" id="myForm" action="handl_web.cgi">
-                                <input class="custom-checkbox" type="checkbox"  checked onchange="javascript:toggleBilling()" onclick="document.getElementById('submitbutton').disabled = !this.checked;" id="color-1" name="dhcp" value="1"><label for="color-1"><b>DHCP</b></label>
-
-                                <label><span>IP</span>
-                                    <input id="111" type="text" class="number-field" onKeyup="checkform()"  name="ip1b" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.vaflue<0){this.value='0';}" disabled/> -
-                                    <input id="112" type="text" class="number-field" onKeyup="checkform()"  name="ip2b" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> -
-                                    <input id="113" type="text" class="number-field" onKeyup="checkform()"  name="ip3b" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> -
-                                    <input id="114" type="text" class="number-field" onKeyup="checkform()"  name="ip4b" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/>
-                                </label>
-
-                                <label><span>MASK</span>
-                                    <input id="121" type="text" class="number-field" onKeyup="checkform()"  name="msk1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> - 
-                                    <input id="122" type="text" class="number-field" onKeyup="checkform()"  name="msk2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> - 
-                                    <input id="123" type="text" class="number-field" onKeyup="checkform()"  name="msk3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> - 
-                                    <input id="124" type="text" class="number-field" onKeyup="checkform()"  name="msk4" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/>
-                                </label>
-
-                                <label><span>GATE</span>
-                                    <input id="131" type="text" class="number-field" onKeyup="checkform()"  name="gtw1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> - 
-                                    <input id="132" type="text" class="number-field" onKeyup="checkform()"  name="gtw2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> - 
-                                    <input id="133" type="text" class="number-field" onKeyup="checkform()"  name="gtw3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> - 
-                                    <input id="134" type="text" class="number-field" onKeyup="checkform()"  name="gtw4" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/></label>
-
-                                <div class="form-style-2-heading"></div>
-                                <input id="submitbutton" type="submit"  value="Submit"/>
-
-                            </form>
-
+                <div class="tab__content tab__content--fix">
+                    <div class="tab__block">
+                        <div class="gap">
+                            <div class="column">
+                                <div class="form-style-2">
+                                    <form name="theform"  method = "post" id="myForm" action="handl_web.cgi">
+                                        <input class="custom-checkbox" type="checkbox"  checked onchange="javascript:toggleBilling()" onclick="document.getElementById('submitbutton').disabled = !this.checked;" id="color-1" name="dhcp" value="1"><label for="color-1"><b>DHCP</b></label>
+                                        <label><span>IP</span>
+                                            <input id="111" type="text" class="number-field" onKeyup="checkform()"  name="ip1b" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.vaflue<0){this.value='0';}" disabled/> -
+                                            <input id="112" type="text" class="number-field" onKeyup="checkform()"  name="ip2b" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> -
+                                            <input id="113" type="text" class="number-field" onKeyup="checkform()"  name="ip3b" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> -
+                                            <input id="114" type="text" class="number-field" onKeyup="checkform()"  name="ip4b" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/>
+                                        </label>
+                                        <label><span>MASK</span>
+                                            <input id="121" type="text" class="number-field" onKeyup="checkform()"  name="msk1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> - 
+                                            <input id="122" type="text" class="number-field" onKeyup="checkform()"  name="msk2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> - 
+                                            <input id="123" type="text" class="number-field" onKeyup="checkform()"  name="msk3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> - 
+                                            <input id="124" type="text" class="number-field" onKeyup="checkform()"  name="msk4" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/>
+                                        </label>
+                                        <label><span>GATE</span>
+                                            <input id="131" type="text" class="number-field" onKeyup="checkform()"  name="gtw1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> - 
+                                            <input id="132" type="text" class="number-field" onKeyup="checkform()"  name="gtw2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> - 
+                                            <input id="133" type="text" class="number-field" onKeyup="checkform()"  name="gtw3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> - 
+                                            <input id="134" type="text" class="number-field" onKeyup="checkform()"  name="gtw4" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/></label>
+        
+                                        <div class="form-style-2-heading"></div>
+                                        <input id="submitbutton" type="submit"  value="Submit"/>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="column"> 
-                        <section class="demo">
-                            <div class="container">
-                                <div class="twelvecol">
-                                    <div class="content">
-                                        <div class="form-style-2">
-                                            <form id="mthe"  name="theform2" method = "post"  action="snmp.cgi"> 
+                    <div class="tab__block">
+                        <div class="gap">
+                            <div class="column"> 
+                                <section class="demo">
+                                    <div class="container">
+                                        <div class="twelvecol">
+                                            <div class="content">
+                                                <div class="form-style-2">
+                                                    <form id="mthe"  name="theform2" method = "post"  action="snmp.cgi"> 
 
-                                                <h3>SNMP-MANAGER </h3>
-                                                <p>
-                                                    <br>
-                                                    <select class="trigger"  name="LIST" id="LIST">
-                                                        <option value="off">Off</option>
-                                                        <option value="SNMP">SNMP</option>
-                                                    </select>
-                                                </p>
-
-
-                                                <input id="221" type="text" class="number-field" onKeyup="mcheckform()"  name="mng1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - 
-                                                <input id="222" type="text" class="number-field" onKeyup="mcheckform()"  name="mng2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - 
-                                                <input id="223" type="text" class="number-field" onKeyup="mcheckform()"  name="mng3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - 
-                                                <input id="224" type="text" class="number-field" onKeyup="mcheckform()"  name="mng4" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" />
-                                                <p>
-
-                                                <h4>SNMP PASSWORD </h4>
+                                                        <h3>SNMP-MANAGER </h3>
+                                                        <p>
+                                                            <br>
+                                                            <select class="trigger"  name="LIST" id="LIST">
+                                                                <option value="off">Off</option>
+                                                                <option value="SNMP">SNMP</option>
+                                                            </select>
+                                                        </p>
 
 
-                                                <input id="snmp_pass" type="password" class="password-field"  name="p_s" oninput="if(element.value.length > 30) {element.value = element.value.substr(0, 30);}" onKeyup="mcheckform()"/>
-                                                </p>
+                                                        <input id="221" type="text" class="number-field" onKeyup="mcheckform()"  name="mng1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - 
+                                                        <input id="222" type="text" class="number-field" onKeyup="mcheckform()"  name="mng2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - 
+                                                        <input id="223" type="text" class="number-field" onKeyup="mcheckform()"  name="mng3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - 
+                                                        <input id="224" type="text" class="number-field" onKeyup="mcheckform()"  name="mng4" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" />
+                                                        <p>
+
+                                                        <h4>SNMP PASSWORD </h4>
 
 
-
-                                                <h3>SNTP-SERVER </h3>
-                                                <br>
-
-
-                                                <input id="231" type="text" class="number-field" onKeyup="mcheckform()"  name="ntp1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - 
-                                                <input id="232" type="text" class="number-field" onKeyup="mcheckform()"  name="ntp2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - 
-                                                <input id="233" type="text" class="number-field" onKeyup="mcheckform()"  name="ntp3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - 
-                                                <input id="234" type="text" class="number-field" onKeyup="mcheckform()"  name="ntp4" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" />
-
-                                                <div class="form-style-2-heading"></div>
-
-                                                <div>
-                                                    <input id="submitbutton2" type="submit" disabled="disabled" value="Submit" />
-                                                </div>				
-
-                                            </form>
+                                                        <input id="snmp_pass" type="password" class="password-field"  name="p_s" oninput="if(element.value.length > 30) {element.value = element.value.substr(0, 30);}" onKeyup="mcheckform()"/>
+                                                        </p>
+                                                        <div>
+                                                            <input id="submitbutton2" type="submit" disabled="disabled" value="Submit" />
+                                                        </div>				
+                                                    </form>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </section>
                             </div>
-                        </section>
+                        </div>
+                    </div>
+
+                    
+                    <div class="tab__block">
+                        <div class="gap">
+                            <div class="column"> 
+                                <section class="demo">
+                                    <div class="container">
+                                        <div class="twelvecol">
+                                            <div class="content">
+                                                <div class="form-style-2">
+                                                    <form id="mthe"  name="theform2" method = "post"  action="snmp.cgi"> 
+
+                                                        <h3>SNTP-SERVER </h3>
+                                                        <br>
+
+                                                        <input id="231" type="text" class="number-field" onKeyup="mcheckform()"  name="ntp1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - 
+                                                        <input id="232" type="text" class="number-field" onKeyup="mcheckform()"  name="ntp2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - 
+                                                        <input id="233" type="text" class="number-field" onKeyup="mcheckform()"  name="ntp3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - 
+                                                        <input id="234" type="text" class="number-field" onKeyup="mcheckform()"  name="ntp4" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" />
+
+                                                        <div class="form-style-2-heading"></div>
+
+                                                        <div>
+                                                            <input id="submitbutton2" type="submit" disabled="disabled" value="Submit" />
+                                                        </div>				
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

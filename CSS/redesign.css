@@ -13,7 +13,10 @@
 }
 
 .container {
-  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 15px;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -53,7 +56,8 @@
   font-weight: 600;
   text-transform: uppercase;
   box-shadow: 1px 1px 4px #DADADA;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out,
+              box-shadow 0.3s ease-in-out;
 }
 
 .logout-button:hover {
@@ -82,5 +86,25 @@
 }
 
 .form-style-2 {
+  padding: 15px;
+}
+
+.tab__content--fix {
+  display: flex;
+  padding: 15px;
+}
+
+.tab__block {
+  width: 33.33%;
+}
+
+.tab__block .column {
+  margin: 0;
+  float: none;
+  width: 100%;
+  min-width: auto;
+}
+
+.gap {
   padding: 15px;
 }
