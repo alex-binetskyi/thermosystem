@@ -32,6 +32,7 @@
                         System: <span class="header__system-name" id="system-name">7c6An6D6nA</span>
                     </p>
                     <div class="time" id="current_timestamp">
+                        00:00
                     </div>
                     <div class="form-style-2">
                         <form  method = "post"  action="logout.cgi">
@@ -59,31 +60,46 @@
                 <label for="tab4">Security</label>
 
                 <div class="tab__content tab__content--fix">
-                    <div class="tab__block">
+                    <div class="tab__block tab__block--33">
                         <div class="gap">
                             <div class="column">
                                 <div class="form-style-2">
                                     <form name="theform"  method = "post" id="myForm" action="handl_web.cgi">
-                                        <input class="custom-checkbox" type="checkbox"  checked onchange="javascript:toggleBilling()" onclick="document.getElementById('submitbutton').disabled = !this.checked;" id="color-1" name="dhcp" value="1"><label for="color-1"><b>DHCP</b></label>
-                                        <label><span>IP</span>
-                                            <input id="111" type="text" class="number-field" onKeyup="checkform()"  name="ip1b" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.vaflue<0){this.value='0';}" disabled/> -
-                                            <input id="112" type="text" class="number-field" onKeyup="checkform()"  name="ip2b" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> -
-                                            <input id="113" type="text" class="number-field" onKeyup="checkform()"  name="ip3b" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> -
-                                            <input id="114" type="text" class="number-field" onKeyup="checkform()"  name="ip4b" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/>
+                                        <input class="custom-checkbox" type="checkbox"  checked onchange="javascript:toggleBilling()" onclick="document.getElementById('submitbutton').disabled = !this.checked;" id="color-1" name="dhcp" value="1">
+                                        <label for="color-1"><b>DHCP</b></label>
+                                        <label>
+                                            <div class="form-style-2__input-wrapper">
+                                                <span>IP</span>
+                                                <div>
+                                                    <input id="111" type="text" class="number-field" onKeyup="checkform()"  name="ip1b" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.vaflue<0){this.value='0';}" disabled/> -
+                                                    <input id="112" type="text" class="number-field" onKeyup="checkform()"  name="ip2b" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> -
+                                                    <input id="113" type="text" class="number-field" onKeyup="checkform()"  name="ip3b" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> -
+                                                    <input id="114" type="text" class="number-field" onKeyup="checkform()"  name="ip4b" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/>
+                                                </div>
+                                            </div>
                                         </label>
-                                        <label><span>MASK</span>
-                                            <input id="121" type="text" class="number-field" onKeyup="checkform()"  name="msk1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> - 
-                                            <input id="122" type="text" class="number-field" onKeyup="checkform()"  name="msk2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> - 
-                                            <input id="123" type="text" class="number-field" onKeyup="checkform()"  name="msk3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> - 
-                                            <input id="124" type="text" class="number-field" onKeyup="checkform()"  name="msk4" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/>
+                                        <label>
+                                            <div class="form-style-2__input-wrapper">
+                                                <span>MASK</span>
+                                                <div>
+                                                    <input id="121" type="text" class="number-field" onKeyup="checkform()"  name="msk1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> - 
+                                                    <input id="122" type="text" class="number-field" onKeyup="checkform()"  name="msk2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> - 
+                                                    <input id="123" type="text" class="number-field" onKeyup="checkform()"  name="msk3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> - 
+                                                    <input id="124" type="text" class="number-field" onKeyup="checkform()"  name="msk4" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/>
+                                                </div>
+                                            </div>
                                         </label>
-                                        <label><span>GATE</span>
-                                            <input id="131" type="text" class="number-field" onKeyup="checkform()"  name="gtw1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> - 
-                                            <input id="132" type="text" class="number-field" onKeyup="checkform()"  name="gtw2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> - 
-                                            <input id="133" type="text" class="number-field" onKeyup="checkform()"  name="gtw3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> - 
-                                            <input id="134" type="text" class="number-field" onKeyup="checkform()"  name="gtw4" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/></label>
-        
-                                        <div class="form-style-2-heading"></div>
+                                        <label>
+                                            <div class="form-style-2__input-wrapper">
+                                                <span>GATE</span>
+                                                <div>
+                                                    <input id="131" type="text" class="number-field" onKeyup="checkform()"  name="gtw1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> - 
+                                                    <input id="132" type="text" class="number-field" onKeyup="checkform()"  name="gtw2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> - 
+                                                    <input id="133" type="text" class="number-field" onKeyup="checkform()"  name="gtw3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/> - 
+                                                    <input id="134" type="text" class="number-field" onKeyup="checkform()"  name="gtw4" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/>
+                                                </div>
+                                            </div>
+                                        </label>
                                         <input id="submitbutton" type="submit"  value="Submit"/>
                                     </form>
                                 </div>
@@ -91,127 +107,116 @@
                         </div>
                     </div>
 
-                    <div class="tab__block">
+                    <div class="tab__block tab__block--33">
                         <div class="gap">
                             <div class="column"> 
-                                <section class="demo">
-                                    <div class="container">
-                                        <div class="twelvecol">
-                                            <div class="content">
-                                                <div class="form-style-2">
-                                                    <form id="mthe"  name="theform2" method = "post"  action="snmp.cgi"> 
+                                <div class="form-style-2">
+                                    <form id="mthe"  name="theform2" method = "post"  action="snmp.cgi"> 
 
-                                                        <h3>SNMP-MANAGER </h3>
-                                                        <p>
-                                                            <br>
-                                                            <select class="trigger"  name="LIST" id="LIST">
-                                                                <option value="off">Off</option>
-                                                                <option value="SNMP">SNMP</option>
-                                                            </select>
-                                                        </p>
+                                        <h3>SNMP-MANAGER </h3>
+                                        <p>
+                                            <br>
+                                            <select class="trigger"  name="LIST" id="LIST">
+                                                <option value="off">Off</option>
+                                                <option value="SNMP">SNMP</option>
+                                            </select>
+                                        </p>
 
-
-                                                        <input id="221" type="text" class="number-field" onKeyup="mcheckform()"  name="mng1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - 
-                                                        <input id="222" type="text" class="number-field" onKeyup="mcheckform()"  name="mng2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - 
-                                                        <input id="223" type="text" class="number-field" onKeyup="mcheckform()"  name="mng3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - 
-                                                        <input id="224" type="text" class="number-field" onKeyup="mcheckform()"  name="mng4" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" />
-                                                        <p>
-
-                                                        <h4>SNMP PASSWORD </h4>
-
-
-                                                        <input id="snmp_pass" type="password" class="password-field"  name="p_s" oninput="if(element.value.length > 30) {element.value = element.value.substr(0, 30);}" onKeyup="mcheckform()"/>
-                                                        </p>
-                                                        <div>
-                                                            <input id="submitbutton2" type="submit" disabled="disabled" value="Submit" />
-                                                        </div>				
-                                                    </form>
-                                                </div>
+                                        <div class="form-style-2__input-wrapper">
+                                            <div>
+                                                <input id="221" type="text" class="number-field" onKeyup="mcheckform()"  name="mng1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - 
+                                                <input id="222" type="text" class="number-field" onKeyup="mcheckform()"  name="mng2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - 
+                                                <input id="223" type="text" class="number-field" onKeyup="mcheckform()"  name="mng3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - 
+                                                <input id="224" type="text" class="number-field" onKeyup="mcheckform()"  name="mng4" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" />    
                                             </div>
                                         </div>
-                                    </div>
-                                </section>
+                                        <br>
+                                        <h4>SNMP PASSWORD </h4>
+                                        <br>
+                                        <p>
+                                            <input id="snmp_pass" type="password" class="password-field"  name="p_s" oninput="if(element.value.length > 30) {element.value = element.value.substr(0, 30);}" onKeyup="mcheckform()"/>
+                                        </p>
+                                        <input id="submitbutton2" type="submit" disabled="disabled" value="Submit" />
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    
-                    <div class="tab__block">
+                    <div class="tab__block tab__block--33">
                         <div class="gap">
                             <div class="column"> 
-                                <section class="demo">
-                                    <div class="container">
-                                        <div class="twelvecol">
-                                            <div class="content">
-                                                <div class="form-style-2">
-                                                    <form id="mthe"  name="theform2" method = "post"  action="snmp.cgi"> 
+                                <div class="form-style-2">
+                                    <form id="mthe"  name="theform2" method = "post"  action="snmp.cgi"> 
 
-                                                        <h3>SNTP-SERVER </h3>
-                                                        <br>
-
-                                                        <input id="231" type="text" class="number-field" onKeyup="mcheckform()"  name="ntp1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - 
-                                                        <input id="232" type="text" class="number-field" onKeyup="mcheckform()"  name="ntp2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - 
-                                                        <input id="233" type="text" class="number-field" onKeyup="mcheckform()"  name="ntp3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - 
-                                                        <input id="234" type="text" class="number-field" onKeyup="mcheckform()"  name="ntp4" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" />
-
-                                                        <div class="form-style-2-heading"></div>
-
-                                                        <div>
-                                                            <input id="submitbutton2" type="submit" disabled="disabled" value="Submit" />
-                                                        </div>				
-
-                                                    </form>
-                                                </div>
-                                            </div>
+                                        <h3>SNTP-SERVER </h3>
+                                        <br>
+                                        <div class="form-style-2__input-wrapper">
+                                            <div>
+                                            <input id="231" type="text" class="number-field" onKeyup="mcheckform()"  name="ntp1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - 
+                                            <input id="232" type="text" class="number-field" onKeyup="mcheckform()"  name="ntp2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - 
+                                            <input id="233" type="text" class="number-field" onKeyup="mcheckform()"  name="ntp3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - 
+                                            <input id="234" type="text" class="number-field" onKeyup="mcheckform()"  name="ntp4" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" />
                                         </div>
-                                    </div>
-                                </section>
+                                        </div>
+                                        <div class="form-style-2-heading"></div>
+
+                                        <input id="submitbutton2" type="submit" disabled="disabled" value="Submit" />
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="tab__content">
-                    <p>
-                    <div class="column">
-                        <div class="form-style-2">
-                            <form name="mtheform3" method = "post" action="hdlterm.cgi">
-                                <label><span class="my">Hight temperature</span>
-                                    <input id="331" type="text" class="number-field" onKeyup="mcheckform3()"  name="termh" onfocusout="focuslost()" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - верхній поріг температури</label>
-
-                                <label><span class="my">Low temperature</span> 
-                                    <input id="332" type="text" class="number-field" onKeyup="mcheckform3()"  name="terml" onfocusout="focuslost()" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - нижній поріг температури</label>
-
-                                <label><span class="my">Hight temperature`s hysteresis</span> 
-                                    <input id="333" type="text" class="number-field" onKeyup="mcheckform3()"  name="gisth" onfocusout="focuslost()" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<1){this.value='1';}" /> - верхній гістерезис температури</label> 
-
-                                <label><span class="my">Low temperature`s hysteresis</span> 
-                                    <input id="334" type="text" class="number-field" onKeyup="mcheckform3()"  name="gistl" onfocusout="focuslost()" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<1){this.value='1';}" /> - нижній гістерезис температури</label>
-
-                                <label><span class="my">Alarm delay</span> 
-                                    <input id="335" type="text" class="number-field" onKeyup="mcheckform3()"  name="alarm" oninput= "this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - час спрацювання сигналізації виходу температури за встановлені значення.</label>                     
-
-                                <div class="form-style-2-heading"></div>							
-                                <label>
-                                    <input id="submitbutton3" type="submit" disabled="disabled" value="Submit" />
-                                </label>
-                                <label>
-                            </form>
-                        </div>
-
-                    </div>
-                    <!--img src="infographic.jpg" width="40%"-->
-                    <h1><input id="777" type="text" ></input></h1>
-                    <div class="row">
-                        <div class="form-style-2">
-                            <form  method = "post"  action="reset.cgi">
-                                <input  type="submit"  value="RESET"> встановити налаштування за замовчуванням
-                            </form>
+                <div class="tab__content tab__content--fix">
+                    <div class="tab__block tab__block--50">
+                        <div class="gap">
+                            <div class="column">
+                                <div class="form-style-2">
+                                    <form name="mtheform3" method = "post" action="hdlterm.cgi">
+                                        <label><span class="my">Hight temperature</span>
+                                            <input id="331" type="text" class="number-field" onKeyup="mcheckform3()"  name="termh" onfocusout="focuslost()" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - верхній поріг температури</label>
+    
+                                        <label><span class="my">Low temperature</span> 
+                                            <input id="332" type="text" class="number-field" onKeyup="mcheckform3()"  name="terml" onfocusout="focuslost()" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - нижній поріг температури</label>
+    
+                                        <label><span class="my">Hight temperature`s hysteresis</span> 
+                                            <input id="333" type="text" class="number-field" onKeyup="mcheckform3()"  name="gisth" onfocusout="focuslost()" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<1){this.value='1';}" /> - верхній гістерезис температури</label> 
+    
+                                        <label><span class="my">Low temperature`s hysteresis</span> 
+                                            <input id="334" type="text" class="number-field" onKeyup="mcheckform3()"  name="gistl" onfocusout="focuslost()" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<1){this.value='1';}" /> - нижній гістерезис температури</label>
+    
+                                        <label><span class="my">Alarm delay</span> 
+                                            <input id="335" type="text" class="number-field" onKeyup="mcheckform3()"  name="alarm" oninput= "this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> - час спрацювання сигналізації виходу температури за встановлені значення.</label>                     
+    
+                                        <div class="form-style-2-heading"></div>							
+                                        <label>
+                                            <input id="submitbutton3" type="submit" disabled="disabled" value="Submit" />
+                                        </label>
+                                        <label>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div class="tab__block tab__block--50">
+                        <div class="gap">
+                            <div class="column">
+                                <!--img src="infographic.jpg" width="40%"-->
+                                <h1><input id="777" type="text" ></input></h1>
+                                <div class="form-style-2">
+                                    <form  method = "post"  action="reset.cgi">
+                                        <input  type="submit"  value="RESET"> встановити налаштування за замовчуванням
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="tab__content">
+                <div class="tab__content tab__content--fix">
                     <div class="column"> 	    
                         <div class="form-style-2">
                             <label><span class="my">Temperature sensor 1</span><input id="out1"  type="text" class="number-field" disabled> - температура у першій точці</label>
@@ -225,7 +230,7 @@
                     </div>                    
                 </div>
 
-                <div class="tab__content">
+                <div class="tab__content tab__content--fix">
                     <div class="column_center">
                         <div class="form-style-2">
                             <form name="mtheform4" method = "post" action="change.cgi">
