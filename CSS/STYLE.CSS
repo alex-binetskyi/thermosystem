@@ -129,12 +129,7 @@
     box-sizing: border-box;
     padding: 15px;
 }
-@media (min-width:768px) {
 
-    .tab + label {
-        width:auto;
-    }
-}
 .tab + label:hover {
     background-color: #f9f9f9;
     box-shadow: 0 1px 0 #f4f4f4 inset;
