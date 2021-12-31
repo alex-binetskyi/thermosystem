@@ -12,8 +12,29 @@
         <!-- CSS -->
         <link type="text/css" href="css/main.css" rel="stylesheet">
         <link type="text/css" href="css/redesign.css" rel="stylesheet">
-	<script src="js/sweet.js"></script>
+        <script src="js/sweet.js"></script> 
         <script src="js/ajax.js"></script>
+
+        <script>
+            function support_format_webp() {
+                var elem = document.createElement('canvas');
+                if (!!(elem.getContext && elem.getContext('2d')))
+                {
+                // was able or not to get WebP representation
+                    return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
+                }
+                else
+                {
+                // very old browser like IE 8, canvas not supported
+                    return false;
+                }
+            }
+
+            if(support_format_webp()) {
+                let html = document.querySelector('html');
+                html.classList.add('webp');
+            }
+        </script>
     </head>
     <body>
 
@@ -25,9 +46,9 @@
                             <img src="images/logo-uk.png">
                         </span>
 
-                        <p class="system-info__p half-gap"><b>ID:</b> 7c6An6D6nA</p>
+                        <p class="system-info__p gap"><b>ID:</b> 7c6An6D6nA</p>
 
-                        <label class="half-gap ma-0" for="pass">Password</label>
+                        <label class="gap ma-0" for="pass">Password</label>
                         <div class="spacer-8"></div>
                         <div class="wrap-input100 validate-input" data-validate="Password is required">
                             <input class="input100" type="password" name="pass" id="pass">
@@ -39,7 +60,7 @@
 
 
                         <div class="container-login100-form-btn">
-                            <button type="button" class="login100-form-btn" onclick="doLogin();">
+                            <button type="button" class="login100-form-btn primary-button" onclick="doLogin();">
                                 Sign in
                             </button>
                         </div>
@@ -50,7 +71,7 @@
 
 
 
-                    <div class="login100-more" style="background-image: url('images/bg-01.jpg');">
+                    <div class="login100-more">
                         <div class="login-container">
                             <h1 class="title">Налаштування<br>
                                 <b>TERMOSYSTEMS</b>

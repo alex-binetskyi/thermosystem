@@ -44,7 +44,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-    font-family: Arial;
     font-size: 14px;
     line-height: 1.7;
     color: #666666;
@@ -122,14 +121,12 @@ iframe {
 /*==================================================================
 [ Text ]*/
 .txt1 {
-    font-family: Arial;
     font-size: 13px;
     line-height: 1.4;
     color: #555555;
 }
 
 .txt2 {
-    font-family: Arial;
     font-size: 13px;
     line-height: 1.4;
     color: #999999;
@@ -229,7 +226,6 @@ iframe {
 .login100-form-title {
     width: 100%;
     display: block;
-    font-family: Arial;
     font-size: 30px;
     color: #333333;
     line-height: 1.2;
@@ -264,7 +260,6 @@ iframe {
     display: block;
     width: 100%;
     background: transparent;
-    font-family: Arial;
     font-size: 18px;
     color: #555555;
     line-height: 1.2;
@@ -393,8 +388,6 @@ div.container5 b {
     height: 50px;
     border-radius: 10px;
     background: black;
-
-    font-family: Arial ;
 
     color: #fff;
     line-height: 1.5;

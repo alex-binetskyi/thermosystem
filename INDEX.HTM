@@ -27,7 +27,7 @@
                 <div class="logo">
                     <a href="#"><img src="images/logotip.svg" width="200" alt=""></a>
                 </div>
-                <div class="half-gap">
+                <div class="gap">
                     <button class="burger-button" type="button">
                     </button>
                 </div>
@@ -49,393 +49,405 @@
         </header>
     <body>
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-        <div class="container">	
-            <div class="tab-wrap">
-                <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
-                <label for="tab1">setting web</label>
-
-                <input type="radio" id="tab2" name="tabGroup1" class="tab">
-                <label for="tab2">setting termosystem</label>
-
-                <input type="radio" id="tab3" name="tabGroup1" onclick = "monitoring();" class="tab">
-                <label for="tab3">monitoring</label>
-
-                <input type="radio" id="tab4" name="tabGroup1" class="tab">
-                <label for="tab4">Admin</label>
-
-                <div class="tab__content tab__content--fix">
-                    <div class="tab__block tab__block--33">
-                        <div class="gap">
-                            <div class="column">
-                                <div class="form-style-2 h-100-bb">
-                                    <form class="h-100-bb" name="theform"  method = "post" id="myForm" action="handl_web.cgi">
-                                        <input class="custom-checkbox" type="checkbox"  checked onchange="javascript:toggleBilling()" onclick="document.getElementById('submitbutton').disabled = !this.checked;" id="color-1" name="dhcp" value="1">
-                                        <label for="color-1"><b>DHCP</b></label>
-                                        <label>
+        <div class="container">
+            <div class="gap">
+                <div class="tab-wrap">
+                    <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
+                    <label for="tab1">setting web</label>
+    
+                    <input type="radio" id="tab2" name="tabGroup1" class="tab">
+                    <label for="tab2">setting termosystem</label>
+    
+                    <input type="radio" id="tab3" name="tabGroup1" onclick = "monitoring();" class="tab">
+                    <label for="tab3">monitoring</label>
+    
+                    <input type="radio" id="tab4" name="tabGroup1" class="tab">
+                    <label for="tab4">Admin</label>
+    
+                    <div class="tab__content tab__content--fix">
+                        <div class="tab__block tab__block--33-100">
+                            <div class="gap">
+                                <div class="column">
+                                    <div class="form-style-2 h-100-bb">
+                                        <form class="h-100-bb" name="theform"  method = "post" id="myForm" action="handl_web.cgi">
+                                            <input class="custom-checkbox" type="checkbox"  checked onchange="javascript:toggleBilling()" onclick="document.getElementById('submitbutton').disabled = !this.checked;" id="color-1" name="dhcp" value="1">
+                                            <label for="color-1"><b>DHCP</b></label>
+                                            <label>
+                                                <div class="input-wrapper">
+                                                    <span>IP</span>
+                                                    <div class="input-wrapper__inner">
+                                                        <div class="input-wrapper__mobile">
+                                                            <div class="input-wrapper__container">
+                                                                <input id="111" type="text" class="number-field" onKeyup="checkform()"  name="ip1b" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.vaflue<0){this.value='0';}" disabled/><span class="input-wrapper__divider">-</span>
+                                                            </div>
+                                                            <div class="input-wrapper__container">
+                                                                <input id="112" type="text" class="number-field" onKeyup="checkform()"  name="ip2b" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/><span class="input-wrapper__divider">-</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="input-wrapper__mobile">
+                                                            <div class="input-wrapper__container">
+                                                                <input id="113" type="text" class="number-field" onKeyup="checkform()"  name="ip3b" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/><span class="input-wrapper__divider">-</span>
+                                                            </div>
+                                                            <div class="input-wrapper__container">
+                                                                <input id="114" type="text" class="number-field" onKeyup="checkform()"  name="ip4b" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <label>
+                                                <div class="input-wrapper">
+                                                    <span>MASK</span>
+                                                    <div class="input-wrapper__inner">
+                                                        <div class="input-wrapper__mobile">
+                                                            <div class="input-wrapper__container">
+                                                                <input id="121" type="text" class="number-field" onKeyup="checkform()"  name="msk1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/><span class="input-wrapper__divider">-</span>
+                                                            </div>
+                                                            <div class="input-wrapper__container">            
+                                                                <input id="122" type="text" class="number-field" onKeyup="checkform()"  name="msk2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/><span class="input-wrapper__divider">-</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="input-wrapper__mobile">
+                                                            <div class="input-wrapper__container">                   
+                                                                <input id="123" type="text" class="number-field" onKeyup="checkform()"  name="msk3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/><span class="input-wrapper__divider">-</span>
+                                                            </div>
+                                                            <div class="input-wrapper__container">   
+                                                                <input id="124" type="text" class="number-field" onKeyup="checkform()"  name="msk4" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <label>
+                                                <div class="input-wrapper">
+                                                    <span>GATE</span>
+                                                    <div class="input-wrapper__inner">
+                                                        <div class="input-wrapper__mobile">
+                                                            <div class="input-wrapper__container">
+                                                                <input id="131" type="text" class="number-field" onKeyup="checkform()"  name="gtw1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/><span class="input-wrapper__divider">-</span>
+                                                            </div>
+                                                            <div class="input-wrapper__container">  
+                                                                <input id="132" type="text" class="number-field" onKeyup="checkform()"  name="gtw2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/><span class="input-wrapper__divider">-</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="input-wrapper__mobile">
+                                                            <div class="input-wrapper__container">  
+                                                                <input id="133" type="text" class="number-field" onKeyup="checkform()"  name="gtw3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/><span class="input-wrapper__divider">-</span>
+                                                            </div>
+                                                            <div class="input-wrapper__container">  
+                                                                <input id="134" type="text" class="number-field" onKeyup="checkform()"  name="gtw4" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <input id="submitbutton" type="submit" disabled="disabled" value="Submit" />
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="tab__block tab__block--33-100">
+                            <div class="gap h-100-bb">
+                                <div class="column"> 
+                                    <div class="form-style-2 h-100-bb">
+                                        <form class="h-100-bb" id="mthe" name="theform2" method = "post"  action="snmp.cgi"> 
+    
+                                            <h3>SNMP-MANAGER </h3>
+                                            <p>
+                                                <br>
+                                                <select class="trigger"  name="LIST" id="LIST">
+                                                    <option value="off">Off</option>
+                                                    <option value="SNMP">SNMP</option>
+                                                </select>
+                                            </p>
+    
                                             <div class="input-wrapper">
-                                                <span>IP</span>
-                                                <div class="input-wrapper__inner">
+                                                <div class="input-wrapper__mobile">
                                                     <div class="input-wrapper__container">
-                                                        <input id="111" type="text" class="number-field" onKeyup="checkform()"  name="ip1b" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.vaflue<0){this.value='0';}" disabled/><span class="input-wrapper__divider">-</span>
+                                                        <input id="221" type="text" class="number-field" onKeyup="mcheckform()"  name="mng1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> <span class="input-wrapper__divider">-</span>
                                                     </div>
-                                                    <div class="input-wrapper__container">
-                                                        <input id="112" type="text" class="number-field" onKeyup="checkform()"  name="ip2b" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/><span class="input-wrapper__divider">-</span>
+                                                    <div class="input-wrapper__container">  
+                                                        <input id="222" type="text" class="number-field" onKeyup="mcheckform()"  name="mng2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> <span class="input-wrapper__divider">-</span> 
                                                     </div>
-                                                    <div class="input-wrapper__container">
-                                                        <input id="113" type="text" class="number-field" onKeyup="checkform()"  name="ip3b" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/><span class="input-wrapper__divider">-</span>
+                                                </div>
+                                                <div class="input-wrapper__mobile">
+                                                    <div class="input-wrapper__container">  
+                                                        <input id="223" type="text" class="number-field" onKeyup="mcheckform()"  name="mng3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> <span class="input-wrapper__divider">-</span> 
                                                     </div>
-                                                    <div class="input-wrapper__container">
-                                                        <input id="114" type="text" class="number-field" onKeyup="checkform()"  name="ip4b" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/>
+                                                    <div class="input-wrapper__container">  
+                                                        <input id="224" type="text" class="number-field" onKeyup="mcheckform()"  name="mng4" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" />    
                                                     </div>
                                                 </div>
                                             </div>
-                                        </label>
-                                        <label>
+                                            <br>
+                                            <h4>SNMP PASSWORD </h4>
+                                            <br>
+                                            <p>
+                                                <input id="snmp_pass" type="password" class="password-field"  name="p_s" oninput="if(element.value.length > 30) {element.value = element.value.substr(0, 30);}" onKeyup="mcheckform()"/>
+                                            </p>
+                                            <input id="submitbutton2" type="submit" disabled="disabled" value="Submit" />
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="tab__block tab__block--33-100">
+                            <div class="gap h-100-bb">
+                                <div class="column"> 
+                                    <div class="form-style-2 h-100-bb">
+                                        <form class="h-100-bb" id="mthe" name="theform2" method="post" action="snmp.cgi"> 
+    
+                                            <h3>SNTP-SERVER </h3>
+                                            <br>
                                             <div class="input-wrapper">
-                                                <span>MASK</span>
-                                                <div class="input-wrapper__inner">
+                                                <div class="input-wrapper__mobile">
                                                     <div class="input-wrapper__container">
-                                                        <input id="121" type="text" class="number-field" onKeyup="checkform()"  name="msk1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/><span class="input-wrapper__divider">-</span>
-                                                    </div>
-                                                    <div class="input-wrapper__container">            
-                                                        <input id="122" type="text" class="number-field" onKeyup="checkform()"  name="msk2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/><span class="input-wrapper__divider">-</span>
+                                                        <input id="231" type="text" class="number-field" onKeyup="mcheckform()"  name="ntp1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /><span class="input-wrapper__divider">-</span> 
                                                     </div>
                                                     <div class="input-wrapper__container">                   
-                                                        <input id="123" type="text" class="number-field" onKeyup="checkform()"  name="msk3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/><span class="input-wrapper__divider">-</span>
-                                                    </div>
-                                                    <div class="input-wrapper__container">   
-                                                        <input id="124" type="text" class="number-field" onKeyup="checkform()"  name="msk4" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/>
+                                                        <input id="232" type="text" class="number-field" onKeyup="mcheckform()"  name="ntp2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /><span class="input-wrapper__divider">-</span> 
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </label>
-                                        <label>
-                                            <div class="input-wrapper">
-                                                <span>GATE</span>
-                                                <div class="input-wrapper__inner">
-                                                    <div class="input-wrapper__container">
-                                                        <input id="131" type="text" class="number-field" onKeyup="checkform()"  name="gtw1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/><span class="input-wrapper__divider">-</span>
+                                                <div class="input-wrapper__mobile">
+                                                    <div class="input-wrapper__container">  
+                                                        <input id="233" type="text" class="number-field" onKeyup="mcheckform()"  name="ntp3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> <span class="input-wrapper__divider">-</span> 
                                                     </div>
                                                     <div class="input-wrapper__container">  
-                                                        <input id="132" type="text" class="number-field" onKeyup="checkform()"  name="gtw2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/><span class="input-wrapper__divider">-</span>
-                                                    </div>
-                                                    <div class="input-wrapper__container">  
-                                                        <input id="133" type="text" class="number-field" onKeyup="checkform()"  name="gtw3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/><span class="input-wrapper__divider">-</span>
-                                                    </div>
-                                                    <div class="input-wrapper__container">  
-                                                        <input id="134" type="text" class="number-field" onKeyup="checkform()"  name="gtw4" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" disabled/>
+                                                        <input id="234" type="text" class="number-field" onKeyup="mcheckform()"  name="ntp4" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" />
                                                     </div>
                                                 </div>
                                             </div>
-                                        </label>
-                                        <input id="submitbutton" type="submit"  value="Submit"/>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tab__block tab__block--33">
-                        <div class="gap h-100-bb">
-                            <div class="column"> 
-                                <div class="form-style-2 h-100-bb">
-                                    <form class="h-100-bb" id="mthe" name="theform2" method = "post"  action="snmp.cgi"> 
-
-                                        <h3>SNMP-MANAGER </h3>
-                                        <p>
-                                            <br>
-                                            <select class="trigger"  name="LIST" id="LIST">
-                                                <option value="off">Off</option>
-                                                <option value="SNMP">SNMP</option>
-                                            </select>
-                                        </p>
-
-                                        <div class="input-wrapper">
-                                            <div class="input-wrapper__container">
-                                                <input id="221" type="text" class="number-field" onKeyup="mcheckform()"  name="mng1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> <span class="input-wrapper__divider">-</span>
-                                            </div>
-                                            <div class="input-wrapper__container">  
-                                                <input id="222" type="text" class="number-field" onKeyup="mcheckform()"  name="mng2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> <span class="input-wrapper__divider">-</span> 
-                                            </div>
-                                            <div class="input-wrapper__container">  
-                                                <input id="223" type="text" class="number-field" onKeyup="mcheckform()"  name="mng3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> <span class="input-wrapper__divider">-</span> 
-                                            </div>
-                                            <div class="input-wrapper__container">  
-                                                <input id="224" type="text" class="number-field" onKeyup="mcheckform()"  name="mng4" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" />    
-                                            </div>
-                                        </div>
-                                        <br>
-                                        <h4>SNMP PASSWORD </h4>
-                                        <br>
-                                        <p>
-                                            <input id="snmp_pass" type="password" class="password-field"  name="p_s" oninput="if(element.value.length > 30) {element.value = element.value.substr(0, 30);}" onKeyup="mcheckform()"/>
-                                        </p>
-                                        <input id="submitbutton2" type="submit" disabled="disabled" value="Submit" />
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tab__block tab__block--33">
-                        <div class="gap h-100-bb">
-                            <div class="column"> 
-                                <div class="form-style-2 h-100-bb">
-                                    <form class="h-100-bb" id="mthe" name="theform2" method="post" action="snmp.cgi"> 
-
-                                        <h3>SNTP-SERVER </h3>
-                                        <br>
-                                        <div class="input-wrapper">
-                                            <div class="input-wrapper__container">
-                                                <input id="231" type="text" class="number-field" onKeyup="mcheckform()"  name="ntp1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /><span class="input-wrapper__divider">-</span> 
-                                            </div>
-                                            <div class="input-wrapper__container">                   
-                                                <input id="232" type="text" class="number-field" onKeyup="mcheckform()"  name="ntp2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /><span class="input-wrapper__divider">-</span> 
-                                            </div>
-                                            <div class="input-wrapper__container">  
-                                                <input id="233" type="text" class="number-field" onKeyup="mcheckform()"  name="ntp3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> <span class="input-wrapper__divider">-</span> 
-                                            </div>
-                                            <div class="input-wrapper__container">  
-                                                <input id="234" type="text" class="number-field" onKeyup="mcheckform()"  name="ntp4" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" />
-                                            </div>
-                                        </div>
-                                        <div class="form-style-2-heading"></div>
-
-                                        <input id="submitbutton2" type="submit" disabled="disabled" value="Submit" />
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab__content tab__content--fix">
-                    <div class="tab__block tab__block--50">
-                        <div class="gap h-100-bb">
-                            <div class="column">
-                                <div class="form-style-2 h-100-bb">
-                                    <form class="h-100-bb" name="mtheform3" method="post" action="hdlterm.cgi">
-                                        <label>
-                                            <div class="input-wrapper">
-                                                <span class="my">Hight temperature</span>
-                                                <div class="input-wrapper__inner flex-nowrap">
-                                                    <div class="input-wrapper__container">
-                                                        <input id="331" type="text" class="number-field" onKeyup="mcheckform3()"  name="termh" onfocusout="focuslost()" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> 
-                                                    </div>
-                                                    <p>- верхній поріг температури</p>
-                                                </div>
-                                            </div>
-                                        </label>
+                                            <div class="form-style-2-heading"></div>
     
-                                        <label>
-                                            <div class="input-wrapper">
-
-                                                <span class="my">Low temperature</span>
-                                                <div class="input-wrapper__inner flex-nowrap">
-                                                    <div class="input-wrapper__container">
-                                                        <input id="332" type="text" class="number-field" onKeyup="mcheckform3()"  name="terml" onfocusout="focuslost()" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" />
-                                                    </div>
-                                                    <p>- нижній поріг температури</p>
-                                                </div>
-                                            </div>
-                                        </label>
-    
-                                        <label>
-                                            <div class="input-wrapper">
-                                                <span class="my">Hight temperature`s hysteresis</span> 
-                                                <div class="input-wrapper__inner flex-nowrap">
-                                                    <div class="input-wrapper__container">
-                                                        <input id="333" type="text" class="number-field" onKeyup="mcheckform3()"  name="gisth" onfocusout="focuslost()" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<1){this.value='1';}" /> 
-                                                    </div>
-                                                    <p>- верхній гістерезис температури</p>
-                                                </div>
-                                            </div>
-                                        </label> 
-    
-                                        <label>
-                                            <div class="input-wrapper">
-                                                <span class="my">Low temperature`s hysteresis</span>
-                                                <div class="input-wrapper__inner flex-nowrap">
-                                                    <div class="input-wrapper__container">
-                                                        <input id="334" type="text" class="number-field" onKeyup="mcheckform3()"  name="gistl" onfocusout="focuslost()" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<1){this.value='1';}" /> 
-                                                    </div>
-                                                    <p> - нижній гістерезис температури</p>
-                                                </div>
-                                            </div>
-                                        </label>
-                                        <label>
-                                            <div class="input-wrapper">
-                                                <span class="my">Alarm delay</span> 
-                                                <div class="input-wrapper__inner flex-nowrap">
-                                                    <div class="input-wrapper__container">
-                                                        <input id="335" type="text" class="number-field" onKeyup="mcheckform3()"  name="alarm" oninput= "this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" />
-                                                    </div>
-                                                    <p> - час спрацювання сигналізації виходу температури за встановлені значення.</p>
-                                                </div>
-                                            </div>
-                                        </label>                     
-                                        <div class="form-style-2-heading"></div>							
-                                        <input id="submitbutton3" type="submit" disabled="disabled" value="Submit" />
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab__block tab__block--50">
-                        <div class="gap h-100-bb">
-                            <div class="column">
-                                <!--img src="infographic.jpg" width="40%"-->
-                                <!-- <h1><input id="777" type="text" ></input></h1> -->
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="tab__content tab__content--fix">
-
-                    <div class="tab__block tab__block--50">
-                        <div class="gap h-100-bb">
-                            <div class="column">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tab__block tab__block--50"> 
-                        <div class="gap h-100-bb">
-                            <div class="column" id="graph">
-                            </div>
-                        </div>
-                    </div>
-
-                                        
-                    <div class="tab__block tab__block--100">
-                        <div class="gap h-100-bb">
-                            <div class="column column--linear">
-                                <div class="form-style-2 h-100-bb">
-                                    <form class="h-100-bb">
-                                        <div class="d-flex">
-                                            <label>
-                                                <div class="input-wrapper">
-                                                    <span class="my">Temperature sensor 1</span>
-                                                    <div class="input-wrapper__inner">
-                                                        <div class="input-wrapper__container">
-                                                            <input id="out1" type="text" class="number-field" disabled>
-                                                        </div>
-                                                        <p> - температура у першій точці</p>
-                                                    </div>
-                                                </div>
-                                            </label>
-                                            <label>
-                                                <div class="input-wrapper">
-                                                    <span class="my">Temperature sensor 2</span>
-                                                    <div class="input-wrapper__inner">
-                                                        <div class="input-wrapper__container">
-                                                            <input id="out2" type="text" class="number-field" disabled>
-                                                        </div>
-                                                        <p>- температура у другій точці</p>
-                                                    </div>
-                                                </div>
-    
-                                            </label>
-                                            <label>
-                                                <div class="input-wrapper">
-                                                    <span class="my">Humidity sensor</span>
-                                                    <div class="input-wrapper__inner">
-                                                        <div class="input-wrapper__container">
-                                                            <input id="out3" type="text" class="number-field" disabled>
-                                                        </div>
-                                                        <p>- відносна вологість</p>
-                                                    </div>
-                                                </div>
-                                            </label>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>  
-                </div>
-
-                <div class="tab__content tab__content--fix">
-                    <div class="tab__block tab__block--50">
-                        <div class="gap">
-                            <div class="column">
-                                <div class="form-style-2 h-100-bb">
-                                    <form name="mtheform4" method="post" action="change.cgi" class="h-100-bb">
-                                        <label>
-                                            <span class="my">Rename</span>
-                                            <input id="410" type="text" class="password-field" onKeyup="alert('TODO: write there function for renaming')" name="p0"/>
-                                        </label>
-                                        <label>
-                                            <span class="my">Password</span>
-                                            <input id="411" type="password" class="password-field" onKeyup="mcheckform4()" name="p1"/>
-                                        </label>
-                                        <label>
-                                            <span class="my">Retype Password</span>
-                                            <input id="412" type="password" class="password-field" onKeyup="mcheckform4()" name="p2"/>
-                                        </label>
-                                        <input id="submitbutton4" type="submit" disabled="disabled" value="Submit" />
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab__block tab__block--50">
-                        <div class="gap">
-                            <div class="column">
-                                <div class="form-style-2 h-100-bb d-flex flex-column space-between">
-                                    <div class="system-info-block">
-                                        <h2>
-                                            Налаштування
-                                            TERMOSYSTEMS
-                                        </h2>
-                                        <address> 
-                                            <p>ТОВ "Українські інфосистеми"<br>
-                                            вул. О.Теліги 4, Київ, 04112</p>
-                                            <ul>
-                                                <li>
-                                                    тел./факс: <a href="tel:+380444225533">+38 (044) 422-55-33</a>
-                                                </li>
-                                                <li>
-                                                    моб. тел.: <a href="tel:+380974225533">+38 (097) 422-55-33</a>
-                                                </li>
-                                                <li>
-                                                    e-mail.: <a href="mailto:info@ukrinfosystems.com.ua">info@ukrinfosystems.com.ua</a>
-                                                </li>
-                                                <li>
-                                                    web: <a href="www.ukrinfosystems.com.ua">www.ukrinfosystems.com.ua</a>
-                                                </li>
-                                            </ul>
-                                        </address>
+                                            <input id="submitbutton2" type="submit" disabled="disabled" value="Submit" />
+                                        </form>
                                     </div>
-
-                                    <form  method = "post"  action="reset.cgi">
-                                        <p class="half-gap ma-0">Встановити налаштування за замовчуванням</p>
-                                        <div class="half-gap">
-                                            <button class="warning-button" type="submit"  value="RESET">Reset</button>
-                                        </div>
-                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div> 
+    
+                    <div class="tab__content tab__content--fix">
+                        <div class="tab__block tab__block--50-100">
+                            <div class="gap h-100-bb">
+                                <div class="column">
+                                    <div class="form-style-2 h-100-bb">
+                                        <form class="h-100-bb" name="mtheform3" method="post" action="hdlterm.cgi">
+                                            <label>
+                                                <div class="input-wrapper">
+                                                    <span class="my">Hight temperature</span>
+                                                    <div class="input-wrapper__inner flex-nowrap">
+                                                        <div class="input-wrapper__container">
+                                                            <input id="331" type="text" class="number-field" onKeyup="mcheckform3()"  name="termh" onfocusout="focuslost()" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" /> 
+                                                        </div>
+                                                        <p>- верхній поріг температури</p>
+                                                    </div>
+                                                </div>
+                                            </label>
+        
+                                            <label>
+                                                <div class="input-wrapper">
+    
+                                                    <span class="my">Low temperature</span>
+                                                    <div class="input-wrapper__inner flex-nowrap">
+                                                        <div class="input-wrapper__container">
+                                                            <input id="332" type="text" class="number-field" onKeyup="mcheckform3()"  name="terml" onfocusout="focuslost()" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" />
+                                                        </div>
+                                                        <p>- нижній поріг температури</p>
+                                                    </div>
+                                                </div>
+                                            </label>
+        
+                                            <label>
+                                                <div class="input-wrapper">
+                                                    <span class="my">Hight temperature`s hysteresis</span> 
+                                                    <div class="input-wrapper__inner flex-nowrap">
+                                                        <div class="input-wrapper__container">
+                                                            <input id="333" type="text" class="number-field" onKeyup="mcheckform3()"  name="gisth" onfocusout="focuslost()" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<1){this.value='1';}" /> 
+                                                        </div>
+                                                        <p>- верхній гістерезис температури</p>
+                                                    </div>
+                                                </div>
+                                            </label> 
+        
+                                            <label>
+                                                <div class="input-wrapper">
+                                                    <span class="my">Low temperature`s hysteresis</span>
+                                                    <div class="input-wrapper__inner flex-nowrap">
+                                                        <div class="input-wrapper__container">
+                                                            <input id="334" type="text" class="number-field" onKeyup="mcheckform3()"  name="gistl" onfocusout="focuslost()" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<1){this.value='1';}" /> 
+                                                        </div>
+                                                        <p> - нижній гістерезис температури</p>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <label>
+                                                <div class="input-wrapper">
+                                                    <span class="my">Alarm delay</span> 
+                                                    <div class="input-wrapper__inner flex-nowrap">
+                                                        <div class="input-wrapper__container">
+                                                            <input id="335" type="text" class="number-field" onKeyup="mcheckform3()"  name="alarm" oninput= "this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1') ; if(this.value>255){this.value='255';}else if(this.value<0){this.value='0';}" />
+                                                        </div>
+                                                        <p> - час спрацювання сигналізації виходу температури за встановлені значення.</p>
+                                                    </div>
+                                                </div>
+                                            </label>                     
+                                            <div class="form-style-2-heading"></div>							
+                                            <input id="submitbutton3" type="submit" disabled="disabled" value="Submit" />
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab__block tab__block--50-100">
+                            <div class="gap h-100-bb">
+                                <div class="column">
+                                    <!--img src="infographic.jpg" width="40%"-->
+                                    <!-- <h1><input id="777" type="text" ></input></h1> -->
+    
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <div class="tab__content tab__content--fix">
+    
+                        <div class="tab__block tab__block--50-100">
+                            <div class="gap h-100-bb">
+                                <div class="column">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="tab__block tab__block--50-100"> 
+                            <div class="gap h-100-bb">
+                                <div class="column" id="graph">
+                                </div>
+                            </div>
+                        </div>
+    
+                                            
+                        <div class="tab__block tab__block--100">
+                            <div class="gap h-100-bb">
+                                <div class="column column--linear">
+                                    <div class="form-style-2 h-100-bb">
+                                        <form class="h-100-bb">
+                                            <div class="inputs-linear">
+                                                <label>
+                                                    <div class="input-wrapper">
+                                                        <span class="my">Temperature sensor 1</span>
+                                                        <div class="input-wrapper__inner">
+                                                            <div class="input-wrapper__container">
+                                                                <input id="out1" type="text" class="number-field" disabled>
+                                                            </div>
+                                                            <p> - температура у першій точці</p>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                                <label>
+                                                    <div class="input-wrapper">
+                                                        <span class="my">Temperature sensor 2</span>
+                                                        <div class="input-wrapper__inner">
+                                                            <div class="input-wrapper__container">
+                                                                <input id="out2" type="text" class="number-field" disabled>
+                                                            </div>
+                                                            <p>- температура у другій точці</p>
+                                                        </div>
+                                                    </div>
+        
+                                                </label>
+                                                <label>
+                                                    <div class="input-wrapper">
+                                                        <span class="my">Humidity sensor</span>
+                                                        <div class="input-wrapper__inner">
+                                                            <div class="input-wrapper__container">
+                                                                <input id="out3" type="text" class="number-field" disabled>
+                                                            </div>
+                                                            <p>- відносна вологість</p>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+    
+                    <div class="tab__content tab__content--fix">
+                        <div class="tab__block tab__block--50-100">
+                            <div class="gap">
+                                <div class="column">
+                                    <div class="form-style-2 h-100-bb">
+                                        <form name="mtheform4" method="post" action="change.cgi" class="h-100-bb">
+                                            <label>
+                                                <span class="my">Rename</span>
+                                                <input id="410" type="text" class="password-field" onKeyup="alert('TODO: write there function for renaming')" name="p0"/>
+                                            </label>
+                                            <label>
+                                                <span class="my">Password</span>
+                                                <input id="411" type="password" class="password-field" onKeyup="mcheckform4()" name="p1"/>
+                                            </label>
+                                            <label>
+                                                <span class="my">Retype Password</span>
+                                                <input id="412" type="password" class="password-field" onKeyup="mcheckform4()" name="p2"/>
+                                            </label>
+                                            <input id="submitbutton4" type="submit" disabled="disabled" value="Submit" />
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab__block tab__block--50-100">
+                            <div class="gap">
+                                <div class="column">
+                                    <div class="form-style-2 h-100-bb d-flex flex-column space-between">
+                                        <div class="system-info-block">
+                                            <h2>
+                                                Налаштування
+                                                TERMOSYSTEMS
+                                            </h2>
+                                            <address> 
+                                                <p>ТОВ "Українські інфосистеми"<br>
+                                                вул. О.Теліги 4, Київ, 04112</p>
+                                                <ul>
+                                                    <li>
+                                                        тел./факс: <a class="link" href="tel:+380444225533">+38 (044) 422-55-33</a>
+                                                    </li>
+                                                    <li>
+                                                        моб. тел.: <a class="link" href="tel:+380974225533">+38 (097) 422-55-33</a>
+                                                    </li>
+                                                    <li>
+                                                        e-mail.: <a class="link" href="mailto:info@ukrinfosystems.com.ua">info@ukrinfosystems.com.ua</a>
+                                                    </li>
+                                                    <li>
+                                                        web: <a class="link" href="www.ukrinfosystems.com.ua">www.ukrinfosystems.com.ua</a>
+                                                    </li>
+                                                </ul>
+                                            </address>
+                                        </div>
+    
+                                        <form  method = "post"  action="reset.cgi">
+                                            <p class="gap ma-0">Встановити налаштування за замовчуванням</p>
+                                            <div class="gap">
+                                                <button class="warning-button" type="submit"  value="RESET">Reset</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
             </div>
         </div>
         <script src='js/index.js'></script>
-        <script>
-            (function() {
-                let burger = document.querySelector('.burger-button');
-                let dropdownMenu = document.querySelector('.header__info');
-
-                burger.addEventListener('click', function() {
-                    dropdownMenu.classList.toggle('header__info--opened');
-                    burger.classList.toggle('burger-button--opened');
-                });
-            })();
-        </script>
+        <script src='js/header.js'></script>
     </body>
 </html>
 
