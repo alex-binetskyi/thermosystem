@@ -369,6 +369,12 @@ body {
   flex-grow: 1;
 }
 
+.w-100-bb {
+  width: 100%;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+
 .column form {
   display: flex;
   flex-direction: column;
@@ -380,6 +386,10 @@ body {
   margin-bottom: 0;
 }
 
+.form-style-2 label {
+  margin-bottom: 10px;
+}
+
 .input-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -389,8 +399,14 @@ body {
   font-weight: bold;
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 10px 0;
   box-sizing: border-box;
+}
+
+.input-wrapper__label {
+  font-weight: bold;
+  padding: 0 5px;
+  min-width: 43px;
 }
 
 .input-wrapper__inner {
@@ -398,6 +414,7 @@ body {
   flex-wrap: wrap;
   align-items: baseline;
 }
+
 
 .input-wrapper__container {
   display: flex;
@@ -449,6 +466,10 @@ body {
   line-height: 1.4;
   font-weight: 400;
   color: #FFFFFF;
+}
+
+.tab-wrap {
+  margin-top: 0;
 }
 
 @media (min-width: 960px){
@@ -534,8 +555,16 @@ body {
   display: flex;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .flex-nowrap {
   flex-wrap: nowrap;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .flex-column {
@@ -562,4 +591,27 @@ body {
 
 .webp .login100-more {
   background-image: url("../images/bg-01.webp");
+}
+
+.img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 359px) {
+  .input-wrapper__inner.flex-nowrap {
+    flex-wrap: wrap;
+  }
+}
+
+.login100-more,
+.login100-form.validate-form{
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .login100-form.validate-form {
+    width: 100%;
+  }
 }
