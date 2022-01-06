@@ -615,3 +615,11 @@ body {
     width: 100%;
   }
 }
+
+.spacer-20 {
+  padding-top: 20px;
+}
+
+.spacer-10 {
+  padding-top: 10px;
+}
